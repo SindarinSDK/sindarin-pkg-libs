@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO SindarinSDK/sindarin-template
-    REF a0d8ecf6f9df494fd1ee1922f8653466420c7fd1
-    SHA512 4d6f4887d9a5faac75157abcebf557a606f63ed68de9b59651e288180ac95e8377cfd36303efaecda71bdba60a6d3591bc3c0dc87f0f61dc918133eb187490fb
+    REF 26b64dcca000c2596d2c014119d09489ab4ca14d
+    SHA512 be7d99a73a90369fe70c8ad40c27bf2fb4b78b8fff125bebbe5de284e6f02fa7fbb80231271df7293f38e4c68c8b69d8a02e09a0f38e1f9109b97db365a4a5eb
     HEAD_REF main
 )
 
