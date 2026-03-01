@@ -33,6 +33,7 @@
       "name": "curl",
       "default-features": false,
       "features": ["ssl"]
-    }
+    },
+    "sindarin-template"
   ]
 }
