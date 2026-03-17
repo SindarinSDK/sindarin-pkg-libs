@@ -6,12 +6,12 @@ Pre-built static libraries for Sindarin projects. Libraries are built via GitHub
 
 **Linux/macOS:**
 ```bash
-curl -fsSL https://raw.githubusercontent.com/SindarinSDK/sindarin-pkg-libs-v2/main/scripts/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/SindarinSDK/sindarin-pkg-libs/main/scripts/install.sh | bash
 ```
 
 **Windows (PowerShell):**
 ```powershell
-irm https://raw.githubusercontent.com/SindarinSDK/sindarin-pkg-libs-v2/main/scripts/install.ps1 | iex
+irm https://raw.githubusercontent.com/SindarinSDK/sindarin-pkg-libs/main/scripts/install.ps1 | iex
 ```
 
 These commands download and extract the latest libraries to `./libs/{platform}` (e.g., `./libs/linux`, `./libs/darwin`, `./libs/windows`).

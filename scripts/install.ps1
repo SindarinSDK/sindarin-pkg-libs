@@ -3,7 +3,7 @@
 
 $ErrorActionPreference = "Stop"
 
-$REPO = "SindarinSDK/sindarin-pkg-libs-v2"
+$REPO = "SindarinSDK/sindarin-pkg-libs"
 $INSTALL_DIR = Join-Path (Get-Location) "libs\windows"
 
 function Write-Status {

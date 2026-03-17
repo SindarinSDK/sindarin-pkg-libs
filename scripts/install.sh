@@ -4,7 +4,7 @@
 
 set -e
 
-REPO="SindarinSDK/sindarin-pkg-libs-v2"
+REPO="SindarinSDK/sindarin-pkg-libs"
 BASE_DIR="$(pwd)/libs"
 
 # Colors for output
