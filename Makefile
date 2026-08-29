@@ -44,7 +44,7 @@ LIBS_DIR := libs/$(PLATFORM)
 VCPKG_DIR := vcpkg
 VCPKG_INSTALLED := vcpkg_installed/$(TRIPLET)
 
-.PHONY: all setup build clean rebuild info help
+.PHONY: all setup build smoke-test clean rebuild info help
 
 # Default target
 all: build
@@ -56,6 +56,7 @@ help:
 	@echo "Targets:"
 	@echo "  setup    - Install vcpkg and dependencies"
 	@echo "  build    - Build and copy libraries to libs/$(PLATFORM)"
+	@echo "  smoke-test - Build the compiler against the candidate libraries"
 	@echo "  rebuild  - Clean and rebuild"
 	@echo "  clean    - Remove build artifacts"
 	@echo "  info     - Display build configuration"
@@ -140,6 +141,10 @@ endif
 		-DVCPKG_TARGET_TRIPLET=$(TRIPLET) \
 		-DVCPKG_INSTALLED_DIR=$(CURDIR)/vcpkg_installed
 	cmake --build --preset $(RELEASE_PRESET)
+
+# Build the primary consumer against the candidate bundle before release.
+smoke-test:
+	PLATFORM=$(PLATFORM) ARCH=$(ARCH) scripts/smoke_test_compiler.sh
 
 # Clean build artifacts
 clean:

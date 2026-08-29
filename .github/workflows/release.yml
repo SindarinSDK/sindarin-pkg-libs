@@ -23,3 +23,4 @@ jobs:
       apt-packages: "autoconf gperf flex bison perl"
       brew-packages: "autoconf gperf flex bison"
       choco-packages: "winflexbison3"
+      run-consumer-smoke-test: true
