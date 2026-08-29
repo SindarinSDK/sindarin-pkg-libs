@@ -122,6 +122,15 @@ function Install-SindarinLibs {
             Get-ChildItem -Path $extractDir | Move-Item -Destination $INSTALL_DIR
         }
 
+        # vcpkg names the static MinGW zlib archive libzs.a, while Sindarin's
+        # Windows linker mapping resolves @link z as -lzlib.
+        $zlibArchive = Join-Path $INSTALL_DIR "lib\libzs.a"
+        $zlibAlias = Join-Path $INSTALL_DIR "lib\libzlib.a"
+        if (-not (Test-Path $zlibArchive)) {
+            throw "Expected zlib archive not found: $zlibArchive"
+        }
+        Copy-Item -Path $zlibArchive -Destination $zlibAlias -Force
+
         Write-Status "Successfully installed $PkgName v$Version to $INSTALL_DIR" -Type "Success"
     }
     catch {
